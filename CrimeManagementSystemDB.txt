@@ -157,7 +157,7 @@ John Doe	Robber 1	Robbery
 
 -- 12 List incident types with more than one open case.
 
-select IncidentType from Crime where Status = 'Open' group by Status having count(Status)>1;
+select IncidentType from Crime where Status = 'Open' having count(Status)>1;
 
 /*
 no output because there is not more than 1 open case
